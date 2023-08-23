@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    user-select: none;
+}
+body{
+    position: relative;
+}
+
+:root{
+    --clr1: #00c7c7;
+
+}
+.page.hide{
+    display: none !important;
+}
+/* Instruction Page Starts */
+#instruction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#instruction .content{
+    width: 70%;
+    text-align: center;
+    margin-bottom: 7px;
+}
+.heading{
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+.heading span{
+    color: var(--clr1);
+}
+.text{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+.mode-rules{
+    margin: 10px 0 30px 0;
+    width: 70%;
+}
+.mode-rule{
+    margin: 7px 0;
+}
+.mode-heading{
+    background-color: var(--clr1);
+    padding: 6px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.mode-text{
+    text-align: justify;
+    line-height: 30px;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.mode-text p{
+    display: flex;
+    justify-content: space-between;
+}
+.mode-text.collapse{
+    height: 0;
+}
+
+.game-actions{
+    width: 70%;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.game-actions select{
+    padding: 7px;
+    width: 75%;
+    border: 1px solid var(--clr1);
+    outline: none;
+    color: var(--clr1);
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+}
+.game-actions button{
+    padding: 7px;
+    width: 25%;
+    background-color: var(--clr1);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* Instruction Page Ends */
+
+
+/* Game Page Starts */
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.game-board{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr1);
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.8);
+    color: #fff;
+    
+}
+.game-header{
+    height: 100px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.block{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hit-block, .score-block{
+    border-right: 1px solid #fff;
+}
+
+.elem{
+    margin-left: 15px;
+    background-color: #fff;
+    color: var(--clr1);
+    padding: 3px 6px;
+    font-weight: 800;
+}
+.game-body{
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+}
+.bubble{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--clr1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--clr1);
+    transition: all 0.3s;
+}
+.bubble:hover{
+   background-color: var(--clr1);
+   color: #fff;
+   border: 1px solid #fff;
+}
+/* Game Page Ends */
+
+
+/* Result Page Starts */
+#result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+#result .heading{
+    width: 80%;
+}
+/* Result Page Ends */
+
+
+
+
+@media screen and (max-width: 450px){
+    /* Instruction Page Starts */
+    .heading{
+        font-size: 1.7rem;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+    }
+    .text{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+    .mode-heading{
+        background-color: var(--clr1);
+        padding: 4px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    #instruction .content, .game-actions, .mode-rules{
+        width: 80%;
+    }
+    /* Instruction Page Ends */
+}

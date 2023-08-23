@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Instruction Page Starts -->
+        <div id="instruction" class="page">
+            <div class="content">
+                <div class="heading">Hello, Welcome to <span>Advanced Bubble</span></div>
+                <p class="text">In this game there will be a board with multiple bubbles in it. And at the top of that
+                    there will be three box: the first one fill be the number which you've to hit on the board, the
+                    second will be the score where you can see your current score, and third will be the timer which
+                    shows you the time how much you have.</p>
+            </div>
+            <div class="game-actions">
+                <select id="select-mode">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="extreme">Extreme</option>
+                    <option value="god">God</option>
+                </select>
+                <button id="start">
+                    Start
+                </button>
+            </div>
+            <div class="mode-rules">
+                <div class="mode-rule">
+                    <div class="mode-heading" mode-id="easy">Easy</div>
+                    <div class="mode-text collapse" id="easy">
+                        <p><span>Time</span> <span>90s</span></p>
+                        <p><span>Score on correct</span> <span>+10</span></p>
+                        <p><span>Score on incorrect</span> <span>-5</span></p>
+                        <p><span>Time on correct</span> <span>+1s</span></p>
+                        <p><span>Time on incorrect</span> <span>-1s</span></p>
+                    </div>
+                    <div class="mode-rule">
+                        <div class="mode-heading" mode-id="medium">Medium</div>
+                        <div class="mode-text collapse" id="medium">
+                            <p><span>Time</span> <span>75s</span></p>
+                            <p><span>Score on correct</span> <span>+15</span></p>
+                            <p><span>Score on incorrect</span> <span>-10</span></p>
+                            <p><span>Time on correct</span> <span>+2s</span></p>
+                            <p><span>Time on incorrect</span> <span>-2s</span></p>
+                        </div>
+                    </div>
+                    <div class="mode-rule">
+                        <div class="mode-heading" mode-id="hard">Hard</div>
+                        <div class="mode-text collapse" id="hard">
+                            <p><span>Time</span> <span>60s</span></p>
+                            <p><span>Score on correct</span> <span>+20</span></p>
+                            <p><span>Score on incorrect</span> <span>-12</span></p>
+                            <p><span>Time on correct</span> <span>+4s</span></p>
+                            <p><span>Time on incorrect</span> <span>-3s</span></p>
+                        </div>
+                    </div>
+                    <div class="mode-rule">
+                        <div class="mode-heading" mode-id="extreme">Extreme</div>
+                        <div class="mode-text collapse" id="extreme">
+                            <p><span>Time</span> <span>45s</span></p>
+                            <p><span>Score on correct</span> <span>+30</span></p>
+                            <p><span>Score on incorrect</span> <span>-15</span></p>
+                            <p><span>Time on correct</span> <span>+5s</span></p>
+                            <p><span>Time on incorrect</span> <span>-4s</span></p>
+                        </div>
+                    </div>
+                    <div class="mode-rule">
+                        <div class="mode-heading" mode-id="god">God</div>
+                        <div class="mode-text collapse" id="god">
+                            <p><span>Time</span> <span>30s</span></p>
+                            <p><span>Score on correct</span> <span>+40</span></p>
+                            <p><span>Score on incorrect</span> <span>-25</span></p>
+                            <p><span>Time on correct</span> <span>+7s</span></p>
+                            <p><span>Time on incorrect</span> <span>-5s</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instruction Page Ends -->
+
+
+        <!-- Game Page Starts -->
+        <div id="game" class="page hide">
+            <div class="game-board">
+                <div class="game-header">
+                    <div class="hit-block block">
+                        <span>Hit</span>
+                        <span class="elem" id="hit"></span>
+                    </div>
+                    <div class="score-block block">
+                        <span>Score</span>
+                        <span class="elem" id="score">0</span>
+                    </div>
+                    <div class="timer-block block">
+                        <span>Timer</span>
+                        <span class="elem" id="timer"></span>
+                    </div>
+                </div>
+                <div class="game-body">
+                  
+                </div>
+            </div>
+        </div>
+        <!-- Game Page Ends -->
+
+
+        <!-- Result Page Starts -->
+        <div id="result" class="page hide">
+            <div class="heading">Game Over. Your score is <span id="score-result"></span><span id="mode-result"></span></div>
+        </div>
+        <!-- Result Page Ends -->
+
+    </main>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
